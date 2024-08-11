@@ -57,7 +57,7 @@ const PioneeringExperties = () => {
     <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto" id="pioneeringExperties">
 
       <div className="text-center mb-8 px-2">
-        <h2 className="text-4xl text-neutral-800 font-semibold">Pioneering Experties</h2>
+        <h2 className="text-4xl text-neutral-800 font-semibold">Pioneering Expertise</h2>
       </div>
 
       <motion.div
