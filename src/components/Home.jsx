@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Carousel } from "flowbite-react";
-import banner from "../assets/banner.png";
-import banner2 from "../assets/banner2.png";
-import banner3 from "../assets/banner3.png";
+import banner1 from "../assets/bohemian-man-thinking.png";
+import banner2 from "../assets/business-woman-presenting-laptop.png";
+import banner3 from "../assets/young-woman-working-laptop-isolated-white-background.png";
 import ContactUs from "./ContactUs"; // Adjust the path as necessary
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
 
   const carouselItems = [
     {
-      img: banner,
+      img: banner1,
       title: "Transforming Businesses using AI",
       text: "Unlock the power of AI and digital transformation with Uno.AI Solutions. We provide expert consulting, innovative technology solutions, and staffing services to help businesses thrive in the digital age.",
       buttonText: "Contact Us"
@@ -39,7 +39,7 @@ const Home = () => {
           {carouselItems.map((item, index) => (
             <div key={index} className="my-28 md:my-8 py-12 flex flex-col w-full mx-auto md:flex-row-reverse items-center justify-between gap-12">
               <div>
-                <img src={item.img} alt="" />
+                <img src={item.img} alt=""  className="object-cover"/>
               </div>
               <div className="md:w-1/2">
                 <h1 className="text-5xl mb-4 font-semibold text-neutralDGrey md:w-3/4 leading-snug">
