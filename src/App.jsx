@@ -19,8 +19,9 @@ function App() {
       <Industries />
       <Global />
       <Careers />
-      <MyFooter />
       <AboutUs />
+      <MyFooter />
+      
     </>
   );
 }
