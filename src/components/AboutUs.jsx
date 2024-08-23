@@ -4,7 +4,6 @@ const AboutUs = () => {
 
   return (
     <div id="aboutus">
-      Coming Soon
     </div>
   );
 
