@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Global from "./components/Global";
 import PioneeringExperties from "./components/PioneeringExperties";
 import Careers from "./components/Careers";
+import AboutUs from "./components/AboutUs";
 
 function App() {
 
@@ -18,7 +19,9 @@ function App() {
       <Industries />
       <Global />
       <Careers />
+      <AboutUs />
       <MyFooter />
+      
     </>
   );
 }

@@ -40,7 +40,7 @@ const Navbar = () => {
     { link: "Industries", path: "industries" },
     { link: "Global", path: "global" },
     { link: "Careers", path: "careers" },
-    { link: "About Us", path: "" },
+    { link: "About Us", path: "aboutus" },
   ];
   return (
     <header className=" bg-white md:bg-transparent fixed top-0 left-0 right-0">
