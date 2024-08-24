@@ -35,7 +35,7 @@ const MyFooter = () => {
                 <span>UNO.AI</span>
               </a>
               <div className="my-8">
-                <p className="mb-1"> Copyright © 2024 Unoai ltd.</p>
+                <p className="mb-1"> Copyright © 2024 Uno.Ai Solutions LLC</p>
                 <p>All rights reserved</p>
               </div>
 
