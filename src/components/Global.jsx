@@ -8,11 +8,11 @@ import { fadeIn } from "../variants";
 
 const Product = () => {
   return (
-    <div className="my-12" id="global">
+    <div className="bg-neutralSilver" id="global">
       <div className="text-center px-2">
         <h2 className="text-4xl text-neutral-800 font-semibold">Global Presence</h2>
       </div>
-      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto mb-12">
+      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto ">
         <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
           <motion.div
             variants={fadeIn("right", 0.2)}
