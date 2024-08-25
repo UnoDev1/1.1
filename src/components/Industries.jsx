@@ -24,7 +24,7 @@ const industries = [
 const Industries = () => {
   return (
 
-    <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto" id="industries">
+    <div className="bg-neutralSilver md:px-14 px-4 py-16 max-w-screen-2xl mx-auto" id="industries">
 
 
       <div className="text-center mb-8 px-2">

@@ -41,7 +41,7 @@ const Careers = () => {
   };
 
   return (
-    <div className="my-6" id="careers">
+    <div className="bg-neutralSilver" id="careers">
 
       <div className="text-center px-2">
         <h2 className="text-4xl text-neutral-800 font-semibold">Careers</h2>
@@ -50,7 +50,7 @@ const Careers = () => {
         </h3>
       </div>
 
-      <div className="relative px-4 lg:px-14 max-w-screen-2xl mx-auto mb-12 h-screen">
+      <div className="relative px-4 lg:px-14 max-w-screen-2xl mx-auto h-screen">
         <div className="relative flex h-full">
           {/* Dropdown */}
           <motion.div

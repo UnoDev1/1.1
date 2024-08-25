@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import PhoneInput from 'react-phone-input-2'
 import "./ContactUs.css";
+import 'react-phone-input-2/lib/style.css'
 
 const ContactUs = ({ onClose }) => {
     const [formData, setFormData] = useState({
         name: "",
+        company: "",
         email: "",
+        contact: "",
         message: ""
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -17,16 +21,25 @@ const ContactUs = ({ onClose }) => {
         });
     };
 
+    const handlePhoneChange = (phone) => {
+        setFormData((prevData) => ({
+            ...prevData,
+            contact: phone
+        }));
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
 
         const data = new FormData();
         data.append("name", formData.name);
+        data.append("company", formData.company);
         data.append("email", formData.email);
+        data.append("contact", formData.contact);
         data.append("message", formData.message);
 
-        const Sheet_Url = "https://script.google.com/macros/s/AKfycbyxPH6g5BP4T3ozFpPrhbOCZfoba6a9IIngqCrRSd2758x2EbQd5bnnmQj7Ytu2EfhgPQ/exec";
+        const Sheet_Url = "https://script.google.com/macros/s/AKfycbyY4P2GUKUbioUlMmoOT7IBQJ33FUBGd6HEEAaPAivAMf8jG6rj_o59Ox6dvPdPLcmz1Q/exec";
         try {
             const response = await fetch(Sheet_Url, {
                 method: "POST",
@@ -92,7 +105,23 @@ const ContactUs = ({ onClose }) => {
                                     value={formData.name}
                                     onChange={handleInputChange}
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    placeholder="Enter Your Full Name"
                                     required
+                                />
+                            </div>
+
+                            <div className="mb-4">
+                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="company">
+                                    Company Name
+                                </label>
+                                <input
+                                    type="text"
+                                    name="company"
+                                    id="company"
+                                    value={formData.company}
+                                    onChange={handleInputChange}
+                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    placeholder="Enter Your Company Name"
                                 />
                             </div>
 
@@ -107,7 +136,35 @@ const ContactUs = ({ onClose }) => {
                                     value={formData.email}
                                     onChange={handleInputChange}
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    placeholder="Enter Your Email"
                                     required
+                                />
+                            </div>
+
+                            <div className="mb-4">
+                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                                    Contact Number
+                                </label>
+                                <PhoneInput
+                                    country={'in'}
+                                    enableSearch={true}
+                                    value={formData.contact}
+                                    onChange={handlePhoneChange}
+                                    containerStyle={{
+                                        boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)', // Shadow style
+                                        border: '1px solid #d1d5db', // Border style
+                                        borderRadius: '0.375rem', // Border radius
+                                        width: '100%' // Full width
+                                    }}
+                                    inputStyle={{
+                                        padding: '0.5rem 3rem', // Padding
+                                        color: '#4b5563', // Text color
+                                        border: 'none', // Remove default border
+                                        outline: 'none', // Remove default outline
+                                        width: '100%'
+                                    }}
+                                    placeholder="Enter your Contact Number"
+                                    
                                 />
                             </div>
 
@@ -122,6 +179,7 @@ const ContactUs = ({ onClose }) => {
                                     onChange={handleInputChange}
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     rows="5"
+                                    placeholder="If you have any message for us, Please drop it."
                                 ></textarea>
                             </div>
 
