@@ -54,37 +54,41 @@ const PioneeringExperties = () => {
     },
   ];
   return (
-    <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto bg-neutralSilver" id="pioneeringExperties">
+    <div className="bg-neutralSilver">
+      <div className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto bg-neutralSilver" id="pioneeringExperties">
 
-      <div className="text-center mb-8 px-2">
-        <h2 className="text-4xl text-neutral-800 font-semibold">Pioneering Expertise</h2>
-      </div>
+        <div className="text-center mb-8 px-2">
+          <h2 className="text-4xl text-neutral-800 font-semibold">Pioneering Expertise</h2>
+        </div>
 
-      <motion.div
-        variants={fadeIn("up", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
-        className="mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto gap-12"
-      >
-        {pioneeringExperties.map((service) => (
-          <div
-            key={service.id}
-            className="px-4 py-8 text-center md:w-[300px] mx-auto md:h-80 rounded-md shadow cursor-pointer hover:-translate-y-5 hover:border-b-4 hover:border-green-700 transition-all duration-300 flex items-center justify-center h-full"
-          >
-            <div className="">
-              <div className="bg-[#E8F5E9] w-14 h-14 mx-auto mb-4 rounded-tl-3xl rounded-br-3xl">
-                <img src={service.image} alt="" className="-ml-5" />
+        <motion.div
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto gap-12"
+        >
+          {pioneeringExperties.map((service) => (
+            <div
+              key={service.id}
+              className="px-4 py-8 text-center md:w-[300px] mx-auto md:h-80 rounded-md shadow cursor-pointer hover:-translate-y-5 hover:border-b-4 hover:border-green-700 transition-all duration-300 flex items-center justify-center h-full"
+            >
+              <div className="">
+                <div className="bg-[#E8F5E9] w-14 h-14 mx-auto mb-4 rounded-tl-3xl rounded-br-3xl">
+                  <img src={service.image} alt="" className="-ml-5" />
+                </div>
+                <h4 className="text-2xl font-bold text-neutralDGrey mb-2 px-2">
+                  {service.title}
+                </h4>
+                <p className="text-sm text-neutralGrey">{service.decription}</p>
               </div>
-              <h4 className="text-2xl font-bold text-neutralDGrey mb-2 px-2">
-                {service.title}
-              </h4>
-              <p className="text-sm text-neutralGrey">{service.decription}</p>
             </div>
-          </div>
-        ))}
-      </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </div>
+
+
   );
 };
 
